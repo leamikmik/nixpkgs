@@ -36,18 +36,18 @@
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "sable-desktop";
   # We have to be using the same version as cinny-web or this isn't going to work.
-  version = "1.7.0";
+  version = "1.15.2";
 
   src = fetchFromGitHub {
     owner = "SableClient";
     repo = "Sable";
-    rev = "01d5cdc";
-    hash = "sha256-Xz9jBwODL59qjfBGi2i5ZsogFi1whJgVJT+Yf0CUVP4=";
+    rev = "ca2cf3f";
+    hash = "sha256-A1Xh+aWNY7vQdp71DSGSyZ5MViSULZibveA5oRhnSJ0=";
   };
 
   sourceRoot = "${finalAttrs.src.name}/src-tauri";
 
-  cargoHash = "sha256-n5tplxbUcKOgThvkaJNs439W2003TwSjt28qxYQdQj0=";
+  cargoHash = "sha256-91R/use/iNf7k5fjpHxBQiHSvsqc6yam8n+TylzICv0=";
 
   postPatch =
     let

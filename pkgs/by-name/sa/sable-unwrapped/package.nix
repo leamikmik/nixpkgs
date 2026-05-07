@@ -11,14 +11,14 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "sable-unwrapped";
   # Remember to update cinny-desktop when bumping this version.
-  version = "1.7.0";
+  version = "1.15.2";
 
   # nixpkgs-update: no auto update
   src = fetchFromGitHub {
     owner = "SableClient";
     repo = "Sable";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-weeqjHEwiNcGWOzrZnyCUKEc22t9SuHnNmM+PkG9T2g=";
+    hash = "sha256-xExjv97z/1npGhQCAgHJk27N3BSxHqbd6o/Moe+sBV0=";
   };
 
   nativeBuildInputs = [
@@ -30,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
 	pnpmDeps = fetchPnpmDeps {
 		inherit (finalAttrs) pname version src;
 		fetcherVersion = 3;
-		hash = "sha256-OqaGcETeHMzclj8QZIVTIEaj7cOncImHlCtbFxyMDww=";
+		hash = "sha256-9QIBOF1d7Z086IsOAHpOayKA3uNY0e5imYQixHKFXxw=";
 	};
 
   # Skip rebuilding native modules since they're not needed for the web app
